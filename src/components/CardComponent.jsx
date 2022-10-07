@@ -1,20 +1,18 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from "react";
+import Card from "react-bootstrap/Card";
 
-const CardComponent = () => {
-    return(
-        <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+const CardComponent = (props) => {
+  return (
+    <Card className="col-3 m3 pt-2" style={{ width: "18rem", margin: "10px 20px" }}>
+      <Card.Img variant="top" src={ props.img } />
       <Card.Body>
-        <Card.Title>Titulo de la card</Card.Title>
+        <Card.Title> { props.title } </Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {props.description}
         </Card.Text>
       </Card.Body>
     </Card>
-    )
-}
+  );
+};
 
 export default CardComponent;
